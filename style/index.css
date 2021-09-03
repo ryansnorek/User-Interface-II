@@ -74,7 +74,8 @@ a {
 }
 a:hover {
     background: black;
-    color: whitesmoke;
+    color: rgb(219, 247, 196);
+    opacity: 0.7;
 }
 /* Intro */
 .intro {
@@ -120,3 +121,35 @@ footer {
     padding: 5%;
     background: #f4f1de;
 }
+.social-container {
+    border: 1px dotted black;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.fa {
+    padding: 20px;
+    font-size: 1rem;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    color: whitesmoke;
+    background: #4f4f4f;
+    
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+.fa-twitter {
+    background: #55ACEE;
+    color: whitesmoke;
+  }
+.fa-instagram {
+    background: #105488;
+    color: whitesmoke;
+}
+.fa-linkedin {
+    background: #096fbd;
+    color: whitesmoke;
+}  

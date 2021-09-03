@@ -38,32 +38,40 @@ table {
 * {
     box-sizing: border-box;
     max-width: 100%;
+    /* border: 1px dotted black; */
 }
+
 html {
     font-size: 62.5%;
     margin: 0 auto;
 }
+
 body {
     line-height: 1.5;
 }
+
 section {
     padding: 1% 0;
     margin: 0 auto;
 }
+
 h1 {
     margin: 0 auto;
     padding-left: 1%;
     font-size: 5rem;
 }
+
 /* Header */
 header {
     background: #f4f1de;
 }
+
 nav {
     display: flex;
     padding-left: 2%;
     padding-bottom: 2%;
 }
+
 a {
     font-size: 2rem;
     padding: 0.5% 2%;
@@ -72,18 +80,23 @@ a {
     color: #4f4f4f;
     border: 1px solid #4f4f4f;
 }
+
 a:hover {
     background: black;
     color: rgb(219, 247, 196);
     opacity: 0.7;
 }
+
 /* Intro */
 .intro {
     display: flex;
+    background: rgb(252, 250, 245);
 }
+
 .intro a {
     padding: 1.2% 2%;
 }
+
 .left, 
 .right {
     display: flex;
@@ -91,41 +104,52 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+
 .right .content {
     width: 75%;
     font-size: 3rem;
     padding: 3%;
 }
+
 /* Projects */
+.projects {
+    background: rgb(252, 250, 245);
+}
 .projects img {
     width: 400px;
     height: 250px;
 }
+
 .projects, 
 .row-one, 
 .row-two {
     display: flex;
     flex-wrap: wrap;
 }
+
 .item {
     width: 25%;
     padding: 1%;
     text-align: center;
     font-size: 2rem;
 }
+
 /* Footer */
 footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
     padding: 5%;
-    background: #f4f1de;
+    background: #f4f1de; 
+
 }
-.social-container {
-    padding: 0 5%;
+
+footer nav {
     display: flex;
     justify-content: space-between;
+    align-items: center; 
+    width: 33%;
+  
 }
+
 .fa {
     padding: 20px;
     font-size: 1rem;
@@ -137,8 +161,21 @@ footer {
     background: black;
     margin: 0 6%;
   }
+
   .fa:hover {
     opacity: 0.7;
     color: rgb(219, 247, 196);
+  }
 
+  /* Animations */
+  @keyframes blink {
+    from {background: whitesmoke;}
+    to {background: rgb(231, 248, 217);}
+  }
+
+  .pro {
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
   }

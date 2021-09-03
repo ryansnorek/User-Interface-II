@@ -134,21 +134,11 @@ footer {
     text-decoration: none;
     border: none;
     color: whitesmoke;
-    background: #4f4f4f;
+    background: black;
     margin: 0 6%;
   }
   .fa:hover {
     opacity: 0.7;
+    color: rgb(219, 247, 196);
+
   }
-.fa-twitter {
-    background: #55ACEE;
-    color: whitesmoke;
-  }
-.fa-instagram {
-    background: #105488;
-    color: whitesmoke;
-}
-.fa-linkedin {
-    background: #096fbd;
-    color: whitesmoke;
-}  

@@ -122,7 +122,6 @@ footer {
     background: #f4f1de;
 }
 .social-container {
-    border: 1px dotted black;
     padding: 0 5%;
     display: flex;
     justify-content: space-between;
@@ -136,7 +135,7 @@ footer {
     border: none;
     color: whitesmoke;
     background: #4f4f4f;
-    
+    margin: 0 6%;
   }
   .fa:hover {
     opacity: 0.7;

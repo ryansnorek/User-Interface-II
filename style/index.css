@@ -41,7 +41,7 @@ table {
     box-sizing: border-box;
     max-width: 100%;
     color: #4f4f4f;
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
 }
 
 html {
@@ -98,13 +98,12 @@ a {
 a:hover {
     background: rgb(30, 70, 70);
     color: rgb(220, 250, 200);
-    text-shadow: 1px 0 30px rgb(220, 250, 200);
+    text-shadow: 1px 0 10px rgb(220, 250, 200);
 }
 
 .current-page {
     background: rgb(30, 70, 70);
     color: rgb(220, 250, 200);
-    text-shadow: 1px 0 30px rgb(220, 250, 200);
 }
 
 
@@ -117,8 +116,6 @@ a:hover {
 .left, 
 .right {
     width: 50%;
-    justify-content: center;
-    align-items: center;
 }
 
 .right {
@@ -187,19 +184,29 @@ footer nav {
   /* Animations */
   @keyframes blink {
     from {
-        color: #4f4f4f;        
+        color: transparent;        
     }
     to {
         color: rgb(219, 247, 196);
         background: rgb(30, 70, 70);
-        text-shadow: 1px 0 30px rgb(249, 255, 244);
+        text-shadow: 1px 0 20px rgb(249, 255, 244);
+    }
+  }
+
+  @keyframes blink-overlap {
+    from {
+        color: #4f4f4f;        
+    }
+    to {
+        color: lavender;
+        text-shadow: 1px 0 20px whitesmoke;
     }
   }
 
 .x {
     background: rgb(30, 70, 70);
     animation-name: blink;
-    animation-duration: 1.618s;
+    animation-duration: 3.618s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     }
@@ -217,8 +224,17 @@ footer nav {
 }
 
 @media (max-width: 800px) {
+    /* .container {
+        background: rgb(252, 250, 245);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    } */
     header {
         align-items: center;
+        background: rgb(252, 250, 245);
+
     }
     h1 {
         height: 25%;
@@ -231,9 +247,27 @@ footer nav {
         padding-left: 0;
         text-align: center;
     }
-   
-    
-    
+    .left {
+        display: none;
+    }
+    .intro-section {
+        justify-content: center;
+    }
+    .right {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url(/assets/com.jpeg);
+        align-items: center;
+    }
+    .right h3 {
+        animation-name: blink-overlap;
+        animation-duration: 9.618s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    .project-item {
+        width: 50%;
+    }
 
 }
 /* 

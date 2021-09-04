@@ -38,6 +38,7 @@ table {
 * {
     box-sizing: border-box;
     max-width: 100%;
+    color: #4f4f4f;
     /* border: 1px dotted black; */
 }
 
@@ -56,6 +57,7 @@ section {
 }
 
 h1 {
+    color: black;
     margin: 0 auto;
     padding-left: 1%;
     font-size: 5rem;
@@ -82,10 +84,8 @@ a {
 }
 
 a:hover {
-    background: black;
-    color: rgb(219, 247, 196);
-    opacity: 0.7;
-    font-weight: bold;
+    background: rgb(30, 70, 70);
+    color: rgb(220, 250, 200);
 }
 
 /* Intro */
@@ -159,35 +159,51 @@ footer nav {
     text-decoration: none;
     border: none;
     color: whitesmoke;
-    background: black;
+    background: rgb(30,70,70);
     margin: 0 6%;
   }
 
-  .fa:hover {
-    opacity: 0.7;
-    color: rgb(219, 247, 196);
-  }
+.fa:hover {
+    color: rgb(220, 250, 200);
+    font-weight: bold;
+}
 
   /* Animations */
-  @keyframes blink {
+  @keyframes shadowblink {
     from {
-        color: #4f4f4f;
+        color: transparent;
         background: whitesmoke;
         
     }
     to {
-        /* background: lavender; */
-        text-shadow: 1px 0 10px lavender;
-        color: rgb(219, 247, 196);
-        border: double;
-        font-size: 80px;
+        text-shadow: 1px 0 30px rgb(16, 69, 69);
     }
   }
 
-  .pro {
-    animation-name: blink;
-    animation-duration: 80s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  @keyframes blink {
+    from {
+        color: #4f4f4f;
+        /* background: whitesmoke; */
+        
+    }
+    to {
+        color: rgb(219, 247, 196);
+        background: rgb(30, 70, 70);
+        text-shadow: 1px 0 30px rgb(249, 255, 244);
+    }
   }
 
+.x {
+    background: rgb(30, 70, 70);
+    animation-name: blink;
+    animation-duration: 1.618s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    }
+
+/* .pro {
+    animation-name: shadowblink;
+    animation-duration: 3.618s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+} */

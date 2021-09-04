@@ -1,1 +1,209 @@
-/* Add CSS styling here */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	padding: 0;
+	vertical-align: baseline;
+} 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+
+/* Global */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    color: #4f4f4f;
+    /* border: 1px dotted black; */
+}
+
+html {
+    font-size: 62.5%;
+    margin: 0 auto;
+}
+
+body {
+    line-height: 1.5;
+}
+
+section {
+    padding: 1% 0;
+    margin: 0 auto;
+}
+
+h1 {
+    color: black;
+    margin: 0 auto;
+    padding-left: 1%;
+    font-size: 5rem;
+}
+
+/* Header */
+header {
+    background: #f4f1de;
+}
+
+nav {
+    display: flex;
+    padding-left: 2%;
+    padding-bottom: 2%;
+}
+
+a {
+    font-size: 2rem;
+    padding: 0.5% 2%;
+    text-decoration: none;
+    background: whitesmoke;
+    color: #4f4f4f;
+    border: 1px solid #4f4f4f;
+}
+
+a:hover {
+    background: rgb(30, 70, 70);
+    color: rgb(220, 250, 200);
+}
+
+/* Intro */
+.intro {
+    display: flex;
+    background: rgb(252, 250, 245);
+}
+
+.intro a {
+    padding: 1.2% 2%;
+}
+
+.left, 
+.right {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.right .content {
+    width: 75%;
+    font-size: 3rem;
+    padding: 3%;
+}
+
+/* Projects */
+.projects {
+    background: rgb(252, 250, 245);
+}
+.projects img {
+    width: 400px;
+    height: 250px;
+}
+
+.projects, 
+.row-one, 
+.row-two {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 25%;
+    padding: 1%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 5%;
+    background: #f4f1de; 
+
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 33%;
+  
+}
+
+.fa {
+    padding: 20px;
+    font-size: 1rem;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    color: whitesmoke;
+    background: rgb(30,70,70);
+    margin: 0 6%;
+  }
+
+.fa:hover {
+    color: rgb(220, 250, 200);
+    font-weight: bold;
+}
+
+  /* Animations */
+  @keyframes shadowblink {
+    from {
+        color: transparent;
+        background: whitesmoke;
+        
+    }
+    to {
+        text-shadow: 1px 0 30px rgb(16, 69, 69);
+    }
+  }
+
+  @keyframes blink {
+    from {
+        color: #4f4f4f;
+        /* background: whitesmoke; */
+        
+    }
+    to {
+        color: rgb(219, 247, 196);
+        background: rgb(30, 70, 70);
+        text-shadow: 1px 0 30px rgb(249, 255, 244);
+    }
+  }
+
+.x {
+    background: rgb(30, 70, 70);
+    animation-name: blink;
+    animation-duration: 1.618s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    }
+
+/* .pro {
+    animation-name: shadowblink;
+    animation-duration: 3.618s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+} */

@@ -85,6 +85,7 @@ a:hover {
     background: black;
     color: rgb(219, 247, 196);
     opacity: 0.7;
+    font-weight: bold;
 }
 
 /* Intro */
@@ -169,13 +170,24 @@ footer nav {
 
   /* Animations */
   @keyframes blink {
-    from {background: whitesmoke;}
-    to {background: rgb(231, 248, 217);}
+    from {
+        color: #4f4f4f;
+        background: whitesmoke;
+        
+    }
+    to {
+        /* background: lavender; */
+        text-shadow: 1px 0 10px lavender;
+        color: rgb(219, 247, 196);
+        border: double;
+        font-size: 80px;
+    }
   }
 
   .pro {
     animation-name: blink;
-    animation-duration: 1.5s;
+    animation-duration: 80s;
     animation-iteration-count: infinite;
-    animation-delay: 2s;
+    animation-timing-function: linear;
   }
+

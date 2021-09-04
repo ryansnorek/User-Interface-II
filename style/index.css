@@ -34,12 +34,34 @@ table {
 	border-spacing: 0;
 } 
 
+/* Media Queries */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* @media (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+}
+
+@media (max-width: 500px) {
+    .container {
+        
+    }
+} */
+
 /* Global */
 * {
     box-sizing: border-box;
     max-width: 100%;
     color: #4f4f4f;
-    /* border: 1px dotted black; */
+    border: 1px dotted black;
 }
 
 html {
@@ -49,6 +71,7 @@ html {
 
 body {
     line-height: 1.5;
+    margin: 0 auto;
 }
 
 section {
@@ -58,7 +81,7 @@ section {
 
 h1 {
     color: black;
-    margin: 0 auto;
+    margin: 0;
     padding-left: 1%;
     font-size: 5rem;
 }
@@ -66,6 +89,14 @@ h1 {
 /* Header */
 header {
     background: #f4f1de;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+nav, h1 {
+    width: 50%;
 }
 
 nav {
@@ -78,7 +109,7 @@ a {
     font-size: 2rem;
     padding: 0.5% 2%;
     text-decoration: none;
-    background: whitesmoke;
+    background: rgb(252, 250, 245);
     color: #4f4f4f;
     border: 1px solid #4f4f4f;
 }
@@ -86,7 +117,15 @@ a {
 a:hover {
     background: rgb(30, 70, 70);
     color: rgb(220, 250, 200);
+    text-shadow: 1px 0 30px rgb(220, 250, 200);
 }
+
+.fixed {
+    background: rgb(30, 70, 70);
+    color: rgb(220, 250, 200);
+    text-shadow: 1px 0 30px rgb(220, 250, 200);
+}
+
 
 /* Intro */
 .intro {
@@ -95,7 +134,8 @@ a:hover {
 }
 
 .intro a {
-    padding: 1.2% 2%;
+    padding: 3% 6%;
+    font-size: 3rem;
 }
 
 .left, 
@@ -121,9 +161,7 @@ a:hover {
     height: 250px;
 }
 
-.projects, 
-.row-one, 
-.row-two {
+.projects{
     display: flex;
     flex-wrap: wrap;
 }
@@ -137,6 +175,7 @@ a:hover {
 
 /* Footer */
 footer {
+    height: 100%;
     width: 100%;
     padding: 5%;
     background: #f4f1de; 
@@ -145,46 +184,30 @@ footer {
 
 footer nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    width: 33%;
-  
+    width: 30%;
+    padding: 0;
 }
 
 .fa {
-    padding: 20px;
-    font-size: 1rem;
-    width: 80px;
+    padding: 6% 12%;
+    font-size: 3rem;
+    width: 100%;
     text-align: center;
     text-decoration: none;
-    border: none;
-    color: whitesmoke;
-    background: rgb(30,70,70);
-    margin: 0 6%;
+    border: 1px solid #4f4f4f;
+    color: #4f4f4f;
+    background: rgb(252, 250, 245);
   }
 
 .fa:hover {
     color: rgb(220, 250, 200);
-    font-weight: bold;
+    background: rgb(30, 70, 70);
 }
 
   /* Animations */
-  @keyframes shadowblink {
-    from {
-        color: transparent;
-        background: whitesmoke;
-        
-    }
-    to {
-        text-shadow: 1px 0 30px rgb(16, 69, 69);
-    }
-  }
-
   @keyframes blink {
     from {
-        color: #4f4f4f;
-        /* background: whitesmoke; */
-        
+        color: #4f4f4f;        
     }
     to {
         color: rgb(219, 247, 196);
@@ -200,10 +223,3 @@ footer nav {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     }
-
-/* .pro {
-    animation-name: shadowblink;
-    animation-duration: 3.618s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-} */

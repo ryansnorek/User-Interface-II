@@ -34,27 +34,7 @@ table {
 	border-spacing: 0;
 } 
 
-/* Media Queries */
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-}
 
-/* @media (max-width: 800px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-
-}
-
-@media (max-width: 500px) {
-    .container {
-        
-    }
-} */
 
 /* Global */
 * {
@@ -95,6 +75,7 @@ header {
     align-items: flex-start;
     
 }
+
 nav, h1 {
     width: 50%;
 }
@@ -120,7 +101,7 @@ a:hover {
     text-shadow: 1px 0 30px rgb(220, 250, 200);
 }
 
-.fixed {
+.current-page {
     background: rgb(30, 70, 70);
     color: rgb(220, 250, 200);
     text-shadow: 1px 0 30px rgb(220, 250, 200);
@@ -128,45 +109,43 @@ a:hover {
 
 
 /* Intro */
-.intro {
+.intro-section {
     display: flex;
     background: rgb(252, 250, 245);
 }
 
-.intro a {
-    padding: 3% 6%;
-    font-size: 3rem;
-}
-
 .left, 
 .right {
-    display: flex;
     width: 50%;
     justify-content: center;
     align-items: center;
 }
 
-.right .content {
-    width: 75%;
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     font-size: 3rem;
     padding: 3%;
 }
 
-/* Projects */
-.projects {
-    background: rgb(252, 250, 245);
-}
-.projects img {
-    width: 400px;
-    height: 250px;
+.intro-section p {
+    width: 75%;
+    font-size: 2.5rem;
 }
 
-.projects{
+.left {
+    /* background-image: url(/assets/com.jpeg); */
+}
+
+/* Projects */
+.project-section {
+    background: rgb(252, 250, 245);
     display: flex;
     flex-wrap: wrap;
 }
 
-.item {
+.project-item {
     width: 25%;
     padding: 1%;
     text-align: center;
@@ -188,6 +167,7 @@ footer nav {
     padding: 0;
 }
 
+/* Social media */
 .fa {
     padding: 6% 12%;
     font-size: 3rem;
@@ -223,3 +203,42 @@ footer nav {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     }
+
+    /* Media Queries */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1120px) {
+    .intro-section p {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        align-items: center;
+    }
+    h1 {
+        height: 25%;
+        text-align: center;
+    }
+    nav {
+        height: 75%;
+        width: 25%;
+        flex-direction: column;
+        padding-left: 0;
+        text-align: center;
+    }
+   
+    
+    
+
+}
+/* 
+@media (max-width: 500px) {
+    .container {
+        
+    }
+} */

@@ -60,7 +60,7 @@ section {
 }
 
 h1 {
-    color: black;
+    /* color: black; */
     margin: 0;
     padding-left: 1%;
     font-size: 5rem;
@@ -73,9 +73,16 @@ a {
     border: 1px solid #4f4f4f;
 }
 
+a:hover {
+    background: #073b4c;
+    color: rgb(220, 250, 200);
+    text-shadow: 1px 0 10px rgb(220, 250, 200);
+}
+
 /*  ------------------------------- Header -------------------------------  */
 header {
     background: #f4f1de;
+
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -98,14 +105,12 @@ header a {
     padding: 0.5% 2%;
 }
 
-a:hover {
-    background: rgb(30, 70, 70);
-    color: rgb(220, 250, 200);
-    text-shadow: 1px 0 10px rgb(220, 250, 200);
-}
 
-.current-page {
-    background: rgb(30, 70, 70);
+/*  ------------------------------- Special -------------------------------  */
+.current-page, 
+.my-projects,
+.fa {
+    background: #22333b;
     color: rgb(220, 250, 200);
 }
 
@@ -160,10 +165,13 @@ a:hover {
     font-size: 1.6rem;
 }
 
+
 /*  ------------------------------- Footer -------------------------------  */
 footer {
     padding: 5%;
-    background: #f4f1de; 
+    background: #f4f1de;
+    /* background: #22333b;  */
+    
     display: flex;
     justify-content: center;
 }
@@ -185,20 +193,15 @@ footer nav {
     background: rgb(252, 250, 245);
   }
 
-.fa:hover {
-    color: rgb(220, 250, 200);
-    background: rgb(30, 70, 70);
-}
-
   /*  ------------------------------- Animations -------------------------------  */
   @keyframes blink {
     from {
-        color: transparent;        
+        /* text-shadow: 1px 0 0 #d0f140;        */
     }
     to {
         color: rgb(219, 247, 196);
-        background: rgb(30, 70, 70);
-        text-shadow: 1px 0 20px rgb(249, 255, 244);
+        background: #073b4c;
+        text-shadow: 1px 0 20px #d0f140;
     }
   }
 
@@ -211,14 +214,6 @@ footer nav {
         text-shadow: 1px 0 20px whitesmoke;
     }
   }
-
-.x {
-    background: rgb(30, 70, 70);
-    animation-name: blink;
-    animation-duration: 3.618s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    }
 
     /* ------------------------------- Media Queries ------------------------------- */
 @media (max-width: 1120px) {
@@ -288,7 +283,6 @@ footer nav {
     }
     .project-item {
         width: 50%;
-
     }
     footer nav {
         width: 33%;

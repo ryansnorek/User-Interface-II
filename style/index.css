@@ -41,6 +41,7 @@ table {
     box-sizing: border-box;
     max-width: 100%;
     color: #4f4f4f;
+    font-family: 'Times New Roman';
     /* border: 1px dotted black; */
 }
 
@@ -60,16 +61,15 @@ section {
 }
 
 h1 {
-    /* color: black; */
     margin: 0;
     padding-left: 1%;
     font-size: 5rem;
+    text-shadow: 4px 0 5px lavender;
 }
 
 a {
     text-decoration: none;
-    background: rgb(252, 250, 245);
-    color: #4f4f4f;
+    background: whitesmoke;
     border: 1px solid #4f4f4f;
 }
 
@@ -103,21 +103,18 @@ header a {
     padding: 0.5% 2%;
 }
 
-
 /*  ------------------------------- Special -------------------------------  */
 .current-page, 
-.my-projects,
-.fa {
+.my-projects {
     background: #22333b;
     color: rgb(220, 250, 200);
 }
 
-
 /*  ------------------------------- Intro -------------------------------  */
 .intro-section {
     display: flex;
-    background: rgb(252, 250, 245);
-    padding: 1%;
+    padding: 0;
+    background: #f7f5ea;
 }
 
 .left, 
@@ -146,7 +143,7 @@ header a {
 
 /*  ------------------------------- Projects -------------------------------  */
 .project-section {
-    background: rgb(252, 250, 245);
+    background: #f7f5ea;
     display: flex;
     flex-wrap: wrap;
 }
@@ -166,13 +163,14 @@ header a {
 
 /*  ------------------------------- Footer -------------------------------  */
 footer {
-    padding: 5%;
-    background: #f4f1de;
+    background: #f1efdc;
     display: flex;
     justify-content: center;
+    
 }
 
 footer nav {
+    padding: 5% 0;
     display: flex;
     width: 30%;
 }
@@ -183,10 +181,9 @@ footer nav {
     font-size: 3rem;
     width: 100%;
     text-align: center;
-    text-decoration: none;
-    border: 1px solid #4f4f4f;
     color: #4f4f4f;
-    background: rgb(252, 250, 245);
+    background: whitesmoke;
+
   }
 
   /*  ------------------------------- Animations -------------------------------  */
@@ -211,7 +208,14 @@ footer nav {
     }
   }
 
-    /* ------------------------------- Media Queries ------------------------------- */
+  /* ------------------------------- Media Queries ------------------------------- */
+@media (min-width: 1920px) {
+    .intro-section img {
+        width: 962px;
+        height: 608px;
+    }
+}
+
 @media (max-width: 1120px) {
     .intro-section p {
         display: none;
@@ -220,11 +224,11 @@ footer nav {
 
 @media (max-width: 800px) {
     .container {
-        background: rgb(252, 250, 245);
+        background: #f7f5ea;
     }
     header {
         align-items: center;
-        background: rgb(252, 250, 245);
+        background: #f7f5ea;
     }
     header a {
         background: ghostwhite;
@@ -286,7 +290,7 @@ footer nav {
     header nav {
         flex-direction: column;
         text-align: center;
-        width: 85px;
+        width: 100px;
     }
   
     h1 {
@@ -309,8 +313,13 @@ footer nav {
         width: 90%;
     }
     footer nav {
-        width: 40%;
+        width: 100px;
         flex-direction: column;
+    }
+    .fa {
+        width: 100px;
+        height: 30px;
+        text-align: center;
     }
     
 }

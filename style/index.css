@@ -168,7 +168,6 @@ header a {
 footer {
     padding: 5%;
     background: #f4f1de;
-    
     display: flex;
     justify-content: center;
 }
@@ -287,8 +286,9 @@ footer nav {
     header nav {
         flex-direction: column;
         text-align: center;
-        width: 33%;
+        width: 85px;
     }
+  
     h1 {
         width: auto;
     }
@@ -309,7 +309,7 @@ footer nav {
         width: 90%;
     }
     footer nav {
-        width: 50%;
+        width: 40%;
         flex-direction: column;
     }
     

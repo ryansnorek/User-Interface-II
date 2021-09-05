@@ -170,7 +170,6 @@ header a {
 footer {
     padding: 5%;
     background: #f4f1de;
-    /* background: #22333b;  */
     
     display: flex;
     justify-content: center;
@@ -234,10 +233,10 @@ footer nav {
         background: ghostwhite;
     }
     header nav {
-        height: 75%;
-        width: 25%;
-        padding-left: 0;
-        padding-bottom: 1%;
+        justify-content: center;
+        /* height: 75%;
+        width: 25%; */
+        /* padding-left: 0; */
     }
     .fa {
         margin: 0 auto;
@@ -248,11 +247,10 @@ footer nav {
     h1 {
         height: 25%;
         text-align: center;
+        padding: 0;
     }
     nav {
-        flex-direction: column;
         padding-left: 0;
-        text-align: center;
     }
     .intro-section {
         justify-content: center;
@@ -286,11 +284,13 @@ footer nav {
     }
     footer nav {
         width: 33%;
-        display: flex;
     }
 }
 
 @media (max-width: 500px) {
+    h1 {
+        width: 400px;
+    }
     .right {
         justify-content: flex-start;
         height: 200px;

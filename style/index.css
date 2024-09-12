@@ -1,1 +1,325 @@
-/* Add CSS styling here */
+
+/*  ------------------------------- Reset -------------------------------  */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	padding: 0;
+	vertical-align: baseline;
+} 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+
+/*  ------------------------------- Global -------------------------------  */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    color: #4f4f4f;
+    font-family: 'Times New Roman';
+    /* border: 1px dotted black; */
+}
+
+html {
+    font-size: 62.5%;
+    margin: 0 auto;
+}
+
+body {
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+section {
+    padding: 1% 0;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    padding-left: 1%;
+    font-size: 5rem;
+    text-shadow: 4px 0 5px lavender;
+}
+
+a {
+    text-decoration: none;
+    background: whitesmoke;
+    border: 1px solid #4f4f4f;
+}
+
+a:hover {
+    background: #073b4c;
+    color: rgb(220, 250, 200);
+    text-shadow: 1px 0 10px rgb(220, 250, 200);
+}
+
+/*  ------------------------------- Header -------------------------------  */
+header {
+    background: #f4f1de;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header nav, h1 {
+    width: 50%;
+}
+
+header nav {
+    display: flex;
+    padding-left: 2%;
+    padding-bottom: 2%;
+}
+
+header a {
+    font-size: 2rem;
+    padding: 0.5% 2%;
+}
+
+/*  ------------------------------- Special -------------------------------  */
+.current-page, 
+.my-projects {
+    background: #22333b;
+    color: rgb(220, 250, 200);
+}
+
+/*  ------------------------------- Intro -------------------------------  */
+.intro-section {
+    display: flex;
+    padding: 0;
+    background: #f7f5ea;
+}
+
+.left, 
+.right {
+    width: 50%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 3rem;
+    padding-left: 3%;
+}
+.right h3 {
+    margin-bottom: 1.5%;
+}
+.right a {
+    padding: 0.5% 2.5%;
+}
+
+.intro-section p {
+    width: 75%;
+    font-size: 2.5rem;
+}
+
+/*  ------------------------------- Projects -------------------------------  */
+.project-section {
+    background: #f7f5ea;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    width: 25%;
+    padding: 2%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.project-item p {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+
+/*  ------------------------------- Footer -------------------------------  */
+footer {
+    background: #f1efdc;
+    display: flex;
+    justify-content: center;
+    
+}
+
+footer nav {
+    padding: 5% 0;
+    display: flex;
+    width: 30%;
+}
+
+/*  ------------------------------- Social media -------------------------------  */
+.fa {
+    padding: 6% 12%;
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    color: #4f4f4f;
+    background: whitesmoke;
+
+  }
+
+  /*  ------------------------------- Animations -------------------------------  */
+  @keyframes blink {
+    from {
+        /* text-shadow: 1px 0 0 #d0f140;        */
+    }
+    to {
+        color: rgb(219, 247, 196);
+        background: #073b4c;
+        text-shadow: 1px 0 20px #d0f140;
+    }
+  }
+
+  @keyframes blink-overlap {
+    from {
+        color: #4f4f4f;        
+    }
+    to {
+        color: lavender;
+        text-shadow: 1px 0 20px whitesmoke;
+    }
+  }
+
+  /* ------------------------------- Media Queries ------------------------------- */
+@media (min-width: 1920px) {
+    .intro-section img {
+        width: 962px;
+        height: 608px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .intro-section p {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        background: #f7f5ea;
+    }
+    header {
+        align-items: center;
+        background: #f7f5ea;
+    }
+    header a {
+        background: ghostwhite;
+    }
+    header nav {
+        justify-content: center;
+        padding-left: 0;
+    }
+    .fa {
+        margin: 0 auto;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        height: 25%;
+        text-align: center;
+        padding: 0;
+    }
+    nav {
+        padding-left: 0;
+    }
+    .intro-section {
+        justify-content: center;
+        margin: 0 3%;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        height: 300px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url(/assets/com.jpeg);
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .right h3 {
+        margin-top: 1.5%;
+        animation-name: blink-overlap;
+        animation-duration: 9.618s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    .project-section {
+        margin: 3% 5%;
+    }
+    .project-item {
+        width: 50%;
+    }
+    footer nav {
+        width: 33%;
+    }
+}
+
+@media (max-width: 553px) {
+    header nav {
+        flex-direction: column;
+        text-align: center;
+        width: 100px;
+    }
+  
+    h1 {
+        width: auto;
+    }
+    .right {
+        justify-content: flex-start;
+        height: 200px;
+        margin: 3%;
+    }
+    .right h3 {
+        margin-top: 10%;
+    }
+    .project-section {
+        justify-content: center;
+        padding: 0 3%;
+        margin-bottom: 5%;
+    }
+    .project-item {
+        width: 90%;
+    }
+    footer nav {
+        width: 100px;
+        flex-direction: column;
+    }
+    .fa {
+        width: 100px;
+        height: 30px;
+        text-align: center;
+    }
+    
+}
